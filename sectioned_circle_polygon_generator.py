@@ -59,7 +59,7 @@ if __name__ == '__main__':
         pol = kml.newpolygon(name="Circular Polygon")
         pol.outerboundaryis = circle_points
         pol.style.polystyle.fill = 0  # No fill
-        pol.style.linestyle.color = simplekml.Color.green  # Fighter-jet-HUD green outline
+        pol.style.linestyle.color = simplekml.Color.rgb(0, 255, 0)  # Fighter-jet-HUD green outline
         pol.style.linestyle.width = 2
 
         # Add division lines to KML
@@ -68,7 +68,7 @@ if __name__ == '__main__':
             lin = kml.newlinestring(name=f"Division Line {idx + 1}")
             lin.coords = line_points
             lin.style.linestyle.width = 2
-            lin.style.linestyle.color = simplekml.Color.green  # Fighter-jet-HUD green lines
+            lin.style.linestyle.color = simplekml.Color.rgb(0, 255, 0)  # Fighter-jet-HUD green lines
 
         # Save KML file
         kml_filename = f"{latitude}_{longitude}_R{radius}_D{divisions}.kml"
